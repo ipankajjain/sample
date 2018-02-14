@@ -1,4 +1,4 @@
-#!/bin/bash
+#!C:\cygwin64\bin\bash
 pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-pipeline") {
             description "Building the ${BRANCH} pipeline."
             parameters {
