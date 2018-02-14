@@ -23,7 +23,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-pipeline") {
             scm {
                 git('git@github.com:/ipankajjain/pipelines.git', 'origin/master') { node ->
                                                            node / 'userRemoteConfigs' / 'hudson.plugins.git.UserRemoteConfig' {
-                                                                       credentialsId('PIPELINE_CREDENTIALS_ID')
+                                                                       credentialsId('ADMIN_KEY')
                                                                        url('git@github.com:/ipankajjain/pipelines.git')
                                                            }
                                                            node / 'extensions' {
