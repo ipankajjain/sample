@@ -5,7 +5,7 @@ pipelineJob("${SEED_PROJECT}-${SEED_BRANCH}-pipeline") {
                         stringParam('GITHUB_PROJECT', "ipankajjain/${SEED_PROJECT}", 'The Github project name including the workspace.')
                         stringParam('BUILD_BRANCH', "${BRANCH}", 'The source branch of the project used for this build.')
                         stringParam('MAVEN_GOAL', "package -Dmaven.test.skip=true", 'The maven goal to be executed.')
-                        stringParam('PIPELINE_CREDENTIALS_ID', 'ADMIN_KEY', 'The ssh API Key used for deployment.')
+                        stringParam('PIPELINE_CREDENTIALS_ID', '${ADMIN_KEY}', 'The ssh API Key used for deployment.')
                         }
 
     // because stash notifier will not work
